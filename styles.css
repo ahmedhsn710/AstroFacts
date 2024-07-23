@@ -1,0 +1,46 @@
+:root {
+    --maincolor: #000000;
+}
+
+.facts-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .fact {
+    display: none;
+  }
+  
+  .fact:first-of-type {
+    display: block;
+  }
+  
+  .fact p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+  
+  #prev-btn,
+  #next-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  #prev-btn:hover,
+  #next-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  #prev-btn:disabled,
+  #next-btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+ 
+  

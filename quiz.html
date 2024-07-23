@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+  <link rel="shortcut icon" href="./cache/icon.ico" type="image/x-icon">
+
+  <style>
+    /* Style for the header */
+    .header {
+      position: absolute;
+      display: flex;
+      top: 0;
+    }
+
+    .logo {
+      position: relative;
+      padding: 10px;
+      float: left;
+      margin-left: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: "Sofia";
+      font-size: 20px;
+      color: orange;
+    }
+
+    /* Style for the main content */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.5;
+      text-align: center;
+      background-image: url(.//cache/astrofact.jpg);
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+
+    }
+
+    h1 {
+
+      position: relative;
+      margin-top: 100px;
+      font-family: "Sofia";
+      color: rgb(248, 153, 0);
+      font-size: 36px;
+    }
+
+    p {
+      color: rgb(255, 255, 255);
+      font-family: "Audiowide";
+      margin-right: 50%;
+    }
+
+    button {
+      background-color: rgb(248, 153, 0);
+      color: white;
+      font-family: "Trirong";
+      padding: 10px 20px;
+      margin: 10px 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: rgb(147, 92, 3);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 3vh;
+      right: 3vw;
+    }
+
+    .question-container h3 {
+      font-family: "Trirong";
+      font-size: 24px;
+      font-weight: bold;
+      width: 50%;
+      margin-bottom: 20px;
+    }
+
+    .option-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .option-container label {
+      font-family: "Trirong";
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    #score-container {
+      text-align: center;
+      background-color: black;
+      position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: rgb(248, 153, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    }
+
+    #score-container h2 {
+      font-family: "Sofia";
+      color: white;
+      font-size: 36px;
+      margin-top: 10px;
+    }
+
+    #score-container p {
+      margin-right: 0px;
+    }
+
+    #quiz-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 40px 100px;
+      padding-left: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      color: rgb(248, 153, 0);
+      font-size: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    label {
+      list-style-type: none;
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid rgb(248, 153, 0);
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    label:hover {
+      background-color: rgb(248, 153, 0);
+      color: white;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input[type="radio"]:checked+label {
+      background-color: rgb(248, 153, 0);
+      color: white;
+      border-color: white;
+    }
+
+    .correct {
+      background-color: greenyellow;
+    }
+
+    .incorrect {
+      background-color: rgb(222, 31, 31);
+    }
+    
+  </style>
+  <title>Astro Facts</title>
+</head>
+
+<body>
+  <header>
+    <div class="header"><a href="index.html">
+        <h3 class="logo">Astro Facts</h3>
+      </a>
+      <button style="margin-left: 70vw;"><a href="facts.html" style="color: white;" onclick="">take a tour</a></button>
+    </div>
+  </header>
+  <h1>Solar System Facts Quiz</h1>
+  <div id="quiz-container">
+    <!-- Quiz questions will be added here dynamically -->
+  </div>
+  <button id="prev-btn" disabled>Previous Question</button>
+  <button id="next-btn">Next Question</button>
+  <button id="submit-btn">Submit</button>
+  <div id="score-container" style="display:none;">
+    <h2>Quiz Results</h2>
+    <p id="score"></p>
+
+  <script src="quiz.js"></script>
+</body>
+
+</html>

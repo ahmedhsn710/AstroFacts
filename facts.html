@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="shortcut icon" href="./cache/icon.ico" type="image/x-icon">
+    <style>
+        .header {
+            position: absolute;
+            display: flex;
+            top: 0;
+        }
+
+        .logo {
+            position: relative;
+            padding: 20px;
+            float: left;
+            margin-left: 30px;
+            animation: leftright 3s ease-in-out infinite;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: "Sofia";
+            font-size: 20px;
+            color: orange;
+        }
+
+        /* Style for the main content */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            text-align: center;
+            background-image: url(.//cache/astrofact.jpg);
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+
+        }
+
+        .facts-container {
+            position: absolute;
+            top: 30vh;
+            left: 10vw;
+            width: 40vw;
+            text-align: left;
+            animation: updown 3s ease-in-out infinite;
+        }
+
+        h1 {
+            position: relative;
+            font-family: "Sofia";
+            color: rgb(248, 153, 0);
+            font-size: 36px;
+        }
+
+        p {
+            color: rgb(255, 255, 255);
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: "Audiowide";
+        }
+
+        button {
+            background-color: rgb(248, 153, 0);
+            color: white;
+            font-family: "Trirong";
+            padding: 10px 20px;
+            margin: 30px 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(147, 92, 3);
+        }
+
+        #prev-btn:disabled,
+        #next-btn:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 3vh;
+            right: 3vw;
+        }
+
+
+        img {
+            position: absolute;
+            top: -5vh;
+            left: 40vw;
+            width: 30vw;
+            height: 30vw;
+            margin-left: 10vw;
+        }
+
+        @keyframes updown {
+            0% {
+                top: 30vh;
+                left: 10vw;
+            }
+
+            50% {
+                top: 31vh;
+                left: 10vw;
+            }
+
+            100% {
+                top: 30vh;
+                left: 10vw;
+            }
+        }
+
+        @keyframes leftright {
+            0% {
+                margin-left: 10px;
+            }
+
+            50% {
+                margin-left: 20px;
+            }
+
+            100% {
+                margin-left: 10px;
+            }
+        }
+
+        .fact img:hover {
+            transform: scale(1.2);
+            transition: all 0.5s ease-in-out;
+        }
+
+        .fact {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background-color: rgb(0, 0, 0);
+            animation: colorChange 5s ease-in-out infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: rgba(0, 0, 0, .3);
+            }
+
+            50% {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                background-color: rgba(0, 0, 0, .3);
+            }
+        }
+
+        
+    </style>
+    <title>Astro Facts</title>
+</head>
+
+<body>
+    <header>
+        <div class="header"><a href="index.html">
+                <h3 class="logo">Astro Facts</h3>
+            </a>
+            <button style="margin-left: 70vw;"><a href="quiz.html" style="color: white;">take the quiz</a></button>
+        </div>
+    </header>
+    <div class="facts-container">
+        
+        <div class="fact">
+            <h1>The Sun</h1>
+            <p>The sun is the center of the solar system. It is a Star. All the plants orbit around it.</p>
+            <img src=".//cache/fact1.gif" alt="">
+        </div>
+        <div class="fact">
+            <h1>8 planets</h1>
+            <p>There are 8 planets in Solar System. All of them orbit around the Sun.</p>
+            <img src=".//cache/fact2.gif" alt="">
+        </div>
+        <div class="fact">
+            <h1>Mecrury</h1>
+            <p>Mercury is the first planet from the Sun. It is small planet.</p>
+            <img src=".//cache/fact3.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Venus</h1>
+            <p>The second planet close to the Sun is Venus. One day on Venus is longer than an year on Earth.</p>
+            <img src=".//cache/fact4.png" alt="">
+        </div>
+        <div class="fact">
+            <h1>Earth</h1>
+            <p>Earth is the third planet from Sun. It is the only planet with life on it. We live on Earth</p>
+            <img src=".//cache/fact5.gif" alt="">
+        </div>
+        <div class="fact">
+            <h1>Moon</h1>
+            <p>Some planets also have moons. Earth has only one moon that orbits around it.</p>
+            <img src=".//cache/fact6.gif" alt="">
+        </div>
+        <div class="fact">
+            <h1>Mars</h1>
+            <p>Mars is the fourth planet from the Sun and it is the closest planet to Earth. It is also called Red
+                Planet. Earth has 10 times more mass than Mars.</p>
+            <img src=".//cache/fact7.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Jupiter</h1>
+            <p>Jupiter is the fifth planet. It is the biggest planet in solar system. It has Giant Red Spot.</p>
+            <img src=".//cache/fact8.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Satrun</h1>
+            <p>Satrun is a gas gaint meaning it has no surface. It also has cute rings around it that are made of rocks
+                orbiting it.</p>
+            <img src=".//cache/fact9.gif" alt="">
+        </div>
+        <div class="fact">
+            <h1>Uranus</h1>
+            <p> Uranus is the coldest planet in the solar system.</p>
+            <img src=".//cache/fact10.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Neptune</h1>
+            <p>Neptune is the last planet in our solar system. It is a gas giant that is much colder than the other gas
+                giants, like Jupiter and Saturn.</p>
+            <img src=".//cache/fact11.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Year on Earth</h1>
+            <p>Earth completes one round trip around sun in 365 days which is one year.</p>
+            <img src=".//cache/fact11.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Most Moons</h1>
+            <p>Jupiter has most moons in solar system. It has more than 80 moons.</p>
+            <img src=".//cache/fact11.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Brightest planet</h1>
+            <p>Venus is the brightest object in the sky after the Sun and Moon.</p>
+            <img src=".//cache/fact11.jpg" alt="">
+        </div>
+        <div class="fact">
+            <h1>Shortest Day</h1>
+            <p>Jupiter has the shortest day.</p>
+            <img src=".//cache/fact11.jpg" alt="">
+        </div>
+
+        <button id="prev-btn" disabled>Previous Fact</button>
+        <button id="next-btn">Next Fact</button>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
